@@ -1,42 +1,54 @@
-pragma solidity ^0.4.17;
-
-import "./DINRegistry.sol";
-import "./Orders.sol";
-
-/** @title A market generates orders from DINs. */
-contract Market {
-    DINRegistry public registry;
-    Orders public orders;
-
-    // Log Solidity errors
-    event LogError(string error);
+pragma solidity ^0.4.18;
 
     /**
-      * @dev Verify that an order signature is valid.
-      * @param signer address of signer.
-      * @param hash Signed Keccak-256 hash.
-      * @param v ECDSA signature parameter v.
-      * @param r ECDSA signature parameters r.
-      * @param s ECDSA signature parameters s.
-      * @return valid Validity of the order signature.
-      */
-    function isValidSignature(
-        address signer,
-        bytes32 hash,
-        uint8 v,
-        bytes32 r,
-        bytes32 s
-    )
-        public
-        pure
-        returns (bool valid)
-    {
-        return signer == ecrecover(
-            keccak256("\x19Ethereum Signed Message:\n32", hash),
-            v,
-            r,
-            s
-        );
+    * Energy Market
+    */
+
+contract Market {
+    /**
+    * Market
+    */
+	address public seller;
+	address public buyer;
+
+	uint private price;
+
+    uint depositedAmount;
+
+    /**
+    * The logs that will be emitted in every step of the contract's life cycle
+    */
+	event Transaction(address seller, address buyer, uint amount);
+
+    /**
+    * The contract constructor
+    */
+	constructor() public {
+		seller = msg.sender;
+		price = msg.value;
+	}
+
+    /**
+    * buyer comes in
+    */
+	function registerAsBuyer() public {
+        require(buyer == address(0), msg.val == price);
+
+        buyer = msg.sender;
+        depositedAmount = msg.val;
+        emit Transaction(seller, buyer, depositedAmount);
     }
 
+    /**
+    * The withdraw function, following the withdraw pattern shown and explained here:
+    * http://solidity.readthedocs.io/en/develop/common-patterns.html#withdrawal-from-contracts
+    */
+    function withdraw() public {
+        require(seller == msg.sender);
+
+        uint amount = depositedAmount;
+
+        depositedAmount = 0;
+        msg.sender.transfer(amount);
+    }
 }
