@@ -114,8 +114,10 @@ class Market extends Component {
         <div class="container-fluid">
           <div class="row">
             <div class="col-8">
-              <p>test</p>
-              <img src="../../img/map.png" id="map" />
+              <img
+                src="https://s3-us-west-1.amazonaws.com/random-stuff-guess/dorahacks/world-map-orange.svg"
+                id="map"
+              />
             </div>
             <div class="col-4">
               {mock_buy.map(item => {
