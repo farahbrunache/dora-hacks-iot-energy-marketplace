@@ -112,7 +112,6 @@ class Market extends Component {
   }
 
   render() {
-    const w3 = this.state.web3;
     return (
       <main>
         <div className="container">
@@ -130,7 +129,7 @@ class Market extends Component {
                 <a
                   className="btn btn-secondary"
                   onClick={() =>
-                    this.sellEnergy((w3.utils.toWei(`1`, 'ether'), 10))
+                    this.sellEnergy(1, 10)
                   }
                 >
                   Sell
