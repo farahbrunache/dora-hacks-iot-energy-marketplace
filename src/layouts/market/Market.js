@@ -97,7 +97,15 @@ class Market extends Component {
   render() {
     return (
       <main>
+<<<<<<< HEAD
         <div className="containerr">
+        <div class='col-xs-6'>
+        <img id='world' src='https://s3-us-west-1.amazonaws.com/random-stuff-guess/dorahacks/world-map-orange.svg' alt=''/>
+            </div>
+            <div class='col-xs-6'>
+=======
+        <div className="container">
+>>>>>>> parent of 6952002... updated styles
             <div className='rows'>
                 <div className='row'>
                     <div className='col-9'></div>
@@ -118,6 +126,7 @@ class Market extends Component {
                       {/*<button type="button" className="btn btn-light" onClick={() => this.buyEnergy(0, 5)}>Buy</button>*/}
                     </div>
           </div>
+            </div>
             </div>
           </div>
       </main>

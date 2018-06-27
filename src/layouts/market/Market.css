@@ -1,7 +1,15 @@
+<<<<<<< HEAD
 h1 {
-
 }
 
 .containerr {
   color: black !important;
 }
+
+#world {
+    width: 602px;
+    height: 322px;
+    background-color: transparent;
+}
+=======
+>>>>>>> parent of 6952002... updated styles

@@ -1,5 +1,8 @@
 import React from 'react'
 
+// Images
+import uPortLogo from '../../../img/uport-logo.svg'
+
 const LoginButton = ({ onLoginUserClick }) => {
   return(
     <li className="pure-menu-item">

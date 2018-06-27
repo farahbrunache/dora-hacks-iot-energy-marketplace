@@ -1,12 +1,19 @@
 /* PAGE */
 
 body,
-.pure-g [class*=pure-u] {
+.pure-g [class*='pure-u'] {
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+span {
   font-family: 'Arial', sans-serif;
+  color: black;
 }
 
 pre {
@@ -32,24 +39,11 @@ pre {
   position: relative;
 }
 
-.home-container {
+.container {
   box-sizing: border-box;
   width: 100%;
   min-height: 800px;
   padding: 45px 20px;
-  background-image: url('./img/background.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  text-align: center;
-  margin: 0 auto;
-}
-
-.containerr{
-  box-sizing: border-box;
-  width: 100%;
-  min-height: 800px;
-  padding: 45px 20px;
-  background-color: #434343;
   background-size: 100% 100%;
   text-align: center;
   margin: 0 auto;
@@ -63,7 +57,7 @@ pre {
   background-color: #233e5e;
 }
 
-.pure-form input[type="text"]:focus {
+.pure-form input[type='text']:focus {
   border-color: #0c1a2b;
 }
 
