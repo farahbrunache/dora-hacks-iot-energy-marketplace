@@ -23,14 +23,12 @@ class Profile extends Component {
             <p>
               {this.props.authData.address}
             </p>
-          </div>
           <div class="pure-u-1-1" id='myChart'>
           </div>
-          <div class="pure-u-1-1" id='energy'>
           <p>628 kWh Produced</p>
-          <p>You saved some dollars</p>
+          <p>You saved 58.2 dollars</p>
+          <Link to="/dashboard" id='detailButton' className="pure-u-1-1 pure-menu-link">Details</Link>
           </div>
-          <Link to="/dashboard" className="pure-u-1-1 pure-menu-link">Details</Link>
         </div>
       </main>
     )

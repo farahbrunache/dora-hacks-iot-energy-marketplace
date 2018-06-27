@@ -98,3 +98,7 @@ pre {
   height: 16px;
   margin-right: 10px;
 }
+
+#detailButton {
+  background-color: #ff9400;
+}
