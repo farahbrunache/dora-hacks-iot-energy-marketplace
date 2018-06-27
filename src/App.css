@@ -5,8 +5,8 @@ body,
   font-family: 'Open Sans', sans-serif;
 }
 
-h1, h2, h3 {
-  font-family: 'Oswald', 'Arial Narrow', sans-serif;
+h1, h2, h3, span {
+  font-family: 'Arial', sans-serif;
 }
 
 pre {
@@ -16,10 +16,42 @@ pre {
   background: #eee;
 }
 
+.title {
+  color: white;
+  font-size: 40pt;
+  font-weight: 1000;
+  top: 26vh;
+  position: relative;
+}
+
+.subtitle {
+  color: white;
+  font-size: 20pt;
+  font-weight: 300;
+  top: 26vh;
+  position: relative;
+}
+
+.home-container {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 800px;
+  padding: 45px 20px;
+  background-image: url('./img/background.jpg');
+  background-size: 100% 100%;
+  text-align: center;
+  margin: 0 auto;
+}
+
 .container {
   box-sizing: border-box;
   width: 100%;
+  min-height: 800px;
   padding: 45px 20px;
+  background-color: #434343;
+  background-size: 100% 100%;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .pure-button-primary {
@@ -39,18 +71,18 @@ pre {
 .navbar {
   position: fixed;
   padding: 5px;
-  background: #0c1a2b;
+  background: transparent;
   font-family: 'Oswald', 'Arial Narrow', sans-serif;
 }
 
 .navbar a {
-  color: #fff;
+  color: #000;
 }
 
 .navbar a:active,
 .navbar a:focus,
 .navbar a:hover {
-  background: #233e5e;
+  background: transparent;
 }
 
 .navbar .pure-menu-heading {

@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router'
+
 
 class Profile extends Component {
   constructor(props, { authData }) {
@@ -6,18 +8,29 @@ class Profile extends Component {
     authData = this.props
   }
 
+  componentDidMount() {
+
+  }
+
   render() {
     return(
       <main className="container">
         <div className="pure-g">
           <div className="pure-u-1-1">
-            <h1>Profile</h1>
-            <p>Change these details in UPort to see them reflected here.</p>
             <p>
-              <strong>Name</strong><br />
               {this.props.authData.name}
             </p>
+            <p>
+              {this.props.authData.address}
+            </p>
           </div>
+          <div class="pure-u-1-1" id='myChart'>
+          </div>
+          <div class="pure-u-1-1" id='energy'>
+          <p>628 kWh Produced</p>
+          <p>You saved some dollars</p>
+          </div>
+          <Link to="/dashboard" className="pure-u-1-1 pure-menu-link">Details</Link>
         </div>
       </main>
     )
