@@ -3,6 +3,8 @@
   margin: 0 auto;
   color: black;
   text-align: center;
+  background-color: #ff9400;
+  max-width: 176px;
 }
 
 .profile-container {
@@ -14,17 +16,16 @@ img {
   padding-top: 5vh;
   width: 45vw;
   text-align: center;
+  max-width: 230px;
 }
 
 #energy {
   font-size: 30pt;
-  line-height: 10px;
   text-align: center;
 }
 
 #produced {
   font-size: 18pt;
-  line-height: 10px;
   text-align: center;
 }
 
@@ -32,4 +33,5 @@ img {
   color: #ff9400;
   font-size: 20pt;
   text-align: center;
+  padding-top: 55px;
 }
