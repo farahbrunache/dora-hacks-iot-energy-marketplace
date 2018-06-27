@@ -11,7 +11,7 @@ contract Market {
 	address public seller;
 	address public buyer;
 
-	uint private price;
+	uint public price;
 
     uint depositedAmount;
 
@@ -25,17 +25,17 @@ contract Market {
     */
 	constructor() public {
 		seller = msg.sender;
-		price = msg.value;
+		price = msg.price;
 	}
 
     /**
     * buyer comes in
     */
 	function registerAsBuyer() public {
-        require(buyer == address(0), msg.val == price);
+        require(buyer == address(0), msg.value == price);
 
         buyer = msg.sender;
-        depositedAmount = msg.val;
+        depositedAmount = msg.value;
         emit Transaction(seller, buyer, depositedAmount);
     }
 
