@@ -14,22 +14,6 @@ class Profile extends Component {
   }
 
   render() {
-    const chartData = {
-      datasets: [{
-        data: [10, 20, 30]
-    }],
-
-    // These labels appear in the legend and in the tooltips when hovering different arcs
-    labels: [
-        'Red',
-        'Yellow',
-        'Blue'
-    ]
-    };
-
-    const chartOptions = {
-    };
-
     return(
       <main className='profile-container'>
         <div className='pure-g'>
@@ -37,7 +21,6 @@ class Profile extends Component {
             <p id='name'>
               {this.props.authData.name}
             </p>
-            <hr/>
           <img src='https://s3-us-west-1.amazonaws.com/random-stuff-guess/dorahacks/ring.png' alt=''/>
           <p id='energy'>628 kWh</p>
           <p id='produced'>Produced</p>
