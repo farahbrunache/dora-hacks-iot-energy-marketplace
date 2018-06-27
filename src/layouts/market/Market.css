@@ -3,6 +3,5 @@
 }
 
 #map {
-  width: 602px;
-  height: 322px;
+  min-width: 400px;
 }
