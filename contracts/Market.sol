@@ -11,7 +11,7 @@ contract Market {
     mapping (uint => Item) items;
     mapping (uint => bool) sold;
 
-    uint itemCount;
+    uint itemCount = 0;
 
     struct Item {
         address seller;
@@ -25,13 +25,6 @@ contract Market {
     event Sell(address seller, uint price, uint energy, uint itemId);
 	event Transaction(address seller, address buyer, uint price, uint energy, uint itemId);
 	event ReceivePayment(address seller, uint amount);
-
-    /**
-    * The contract constructor
-    */
-	constructor() public {
-	    itemCount = 0;
-	}
 
 	function sellEnergy(uint price, uint energy) public {
 	    var item = Item(msg.sender, price, energy);
