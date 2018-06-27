@@ -97,7 +97,7 @@ class Market extends Component {
   render() {
     return (
       <main>
-        <div className="container">
+        <div className="containerr">
             <div className='rows'>
                 <div className='row'>
                     <div className='col-9'></div>
