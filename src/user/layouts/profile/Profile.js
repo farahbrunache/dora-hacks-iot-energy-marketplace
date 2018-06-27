@@ -31,7 +31,7 @@ class Profile extends Component {
     };
 
     return(
-      <main className='container'>
+      <main className='containerr'>
         <div className='pure-g'>
           <div className='pure-u-1-1'>
             <p id='name'>
