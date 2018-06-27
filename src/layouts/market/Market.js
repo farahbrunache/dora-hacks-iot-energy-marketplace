@@ -111,10 +111,13 @@ class Market extends Component {
   render() {
     return (
       <main className="container">
-        <div className="rows">
-          <div className="row">
-            <div className="col-9" />
-            <div className="col-3">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-8">
+              <p>test</p>
+              <img src="../../img/map.png" id="map" />
+            </div>
+            <div class="col-4">
               {mock_buy.map(item => {
                 return (
                   <div className="card">
