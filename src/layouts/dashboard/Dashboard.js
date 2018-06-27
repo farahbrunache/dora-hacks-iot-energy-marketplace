@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Chart from 'chart.js'
 
 class Dashboard extends Component {
   constructor(props, { authData }) {
@@ -11,7 +12,7 @@ class Dashboard extends Component {
     const data = {
       labels: ['Jun 22', 'Jun 23', 'Jun 24', 'Jun 25', 'Jun 26', 'Jun 27'],
       fillColor: ["rgba(0,10,220,0.5)","rgba(220,0,10,0.5)","rgba(220,0,0,0.5)","rgba(120,250,120,0.5)" ],
-            strokeColor: "rgba(220,220,220,0.8)",
+            strokeColor: "rgba(220,220,220,0.8)", 
             highlightFill: "rgba(220,220,220,0.75)",
             highlightStroke: "rgba(220,220,220,1)",
         datasets: [{
@@ -36,10 +37,11 @@ class Dashboard extends Component {
             borderWidth: 1
         }]
     };
+    new Chart(chart).Line(data);
   }
 
   render() {
-
+    
 
     const options = {
       scales: {

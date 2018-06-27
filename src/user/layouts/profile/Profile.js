@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
+import {Doughnut as DoughnutChart} from 'react-chartjs';
 
 import './Profile.css'
 
@@ -29,7 +30,7 @@ class Profile extends Component {
 
     const chartOptions = {
     };
-
+    
     return(
       <main className='container'>
         <div className='pure-g'>
