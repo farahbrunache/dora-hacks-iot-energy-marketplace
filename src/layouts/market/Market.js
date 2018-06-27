@@ -97,7 +97,7 @@ class Market extends Component {
   render() {
     return (
       <main>
-        <div className="containerr">
+        <div className="market-container">
         <div class='col-xs-6'>
         <img id='world' src='https://s3-us-west-1.amazonaws.com/random-stuff-guess/dorahacks/world-map-orange.svg' alt=''/>
             </div>
