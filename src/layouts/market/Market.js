@@ -125,6 +125,8 @@ class Market extends Component {
                   alt=""
                 />
                 <h3>Sell</h3>
+                <p>Looks like you have 15kWh in surplus.</p>
+                <p>Sell now to earn!</p>
                 <a
                   className="btn btn-secondary"
                   onClick={() =>
