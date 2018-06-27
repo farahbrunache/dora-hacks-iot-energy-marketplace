@@ -8,7 +8,7 @@ class Market extends Component {
     super(props);
     authData = this.props;
   }
-  foo() {}
+
   componentDidMount() {
     var data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
@@ -39,7 +39,6 @@ class Market extends Component {
                 <div class="col-6">
                   <Chart type="line" data={data} />
                 </div>
-                {foo()}
                 <div class="col-6">
                   <Chart type="line" data={data} />
                 </div>
