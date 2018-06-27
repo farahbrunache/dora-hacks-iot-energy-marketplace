@@ -1,0 +1,28 @@
+#detailButton {
+  width: 50%;
+  margin: 0 auto;
+  color: black;
+}
+
+.container {
+  color: white;
+}
+
+img {
+  padding-top: 5vh;
+  width: 45vw;
+}
+
+#energy {
+  font-size: 30pt;
+  line-height: 10px;
+}
+
+#produced {
+  font-size: 18pt;
+  line-height: 10px;
+}
+
+#name {
+  color: #ff9400;
+}
