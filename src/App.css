@@ -44,6 +44,18 @@ pre {
   width: 100%;
   min-height: 800px;
   padding: 45px 20px;
+  background-image: url('./img/background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.containerr {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 800px;
+  padding: 45px 20px;
   background-size: 100% 100%;
   text-align: center;
   margin: 0 auto;
