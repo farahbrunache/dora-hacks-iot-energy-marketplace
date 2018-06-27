@@ -1,18 +1,20 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import './Home.css';
 
 class Home extends Component {
   render() {
-    return(
+    return (
       <main className="home-container">
-        <div className="pure-g">
-          <div className="pure-u-1-1">
-            <span className='title'> SUNEE </span>
-            <h2 className='subtitle'> A Decentralized Solar Exchange Platform </h2>
-          </div>
+        <div class="container-fluid" id="home">
+          <span className="title"> SUNEE </span>
+          <h2 className="subtitle">
+            {' '}
+            A Decentralized Solar Exchange Platform{' '}
+          </h2>
         </div>
       </main>
-    )
+    );
   }
 }
 
-export default Home
+export default Home;
