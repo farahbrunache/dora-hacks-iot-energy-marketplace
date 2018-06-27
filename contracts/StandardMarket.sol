@@ -39,7 +39,7 @@ contract StandardMarket is Market {
     function buyProduct(
         uint256[4] orderValues,
         address[1] orderAddresses,
-        bytes32 nonceHash,
+        // bytes32 nonceHash,
         uint8 v,
         bytes32 r,
         bytes32 s
