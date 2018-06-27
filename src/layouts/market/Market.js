@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Chart } from '../../../node_modules/primereact/components/chart/Chart';
+import { Chart } from 'react-chartjs';
 
 import './Market.css';
 
