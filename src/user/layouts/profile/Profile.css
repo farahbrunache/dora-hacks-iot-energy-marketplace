@@ -2,28 +2,34 @@
   width: 50%;
   margin: 0 auto;
   color: black;
+  text-align: center;
 }
 
-.container {
-  color: white;
+.profile-container {
+  color: transparent;
+  text-align: center;
 }
 
 img {
   padding-top: 5vh;
   width: 45vw;
+  text-align: center;
 }
 
 #energy {
   font-size: 30pt;
   line-height: 10px;
+  text-align: center;
 }
 
 #produced {
   font-size: 18pt;
   line-height: 10px;
+  text-align: center;
 }
 
 #name {
   color: #ff9400;
   font-size: 20pt;
+  text-align: center;
 }
