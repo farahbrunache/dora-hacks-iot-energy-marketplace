@@ -1,6 +1,9 @@
-h1 {
-}
-
 .containerr {
   color: black !important;
+}
+
+#map {
+  width: 602px;
+  height: 322px;
+  background-color: #ffa01c;
 }
