@@ -113,13 +113,13 @@ class Market extends Component {
       <main className="container">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-8">
+            <div class="col-lg-6">
               <img
                 src="https://s3-us-west-1.amazonaws.com/random-stuff-guess/dorahacks/world-map-orange.svg"
                 id="map"
               />
             </div>
-            <div class="col-4">
+            <div class="col-lg-6">
               {mock_buy.map(item => {
                 return (
                   <div className="card">
