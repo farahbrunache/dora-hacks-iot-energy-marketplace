@@ -20,11 +20,11 @@ const history = syncHistoryWithStore(browserHistory, store)
 ReactDOM.render((
     <Provider store={store}>
       <Router history={history}>
-        <Route path="/" component={Market}>
+        <Route path="/" component={App}>
           <IndexRoute component={Home} />
-          <Route path="dashboard" component={Dashboard} />
-          <Route path="profile" component={Profile} />
-          <Route path="market" component={Market} />
+          <Route path="dashboard" component={UserIsAuthenticated(Dashboard)} />
+          <Route path="profile" component={UserIsAuthenticated(Profile)} />
+          <Route path="market" component={UserIsAuthenticated(Market)} />
         </Route>
       </Router>
     </Provider>
