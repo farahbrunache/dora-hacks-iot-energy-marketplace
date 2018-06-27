@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MarketContract from '../../../contracts/Market.sol';
+import MarketContract from '../../../build/contracts/Market';
 import getWeb3 from '../../util/getWeb3';
 
 import './Market.css';
