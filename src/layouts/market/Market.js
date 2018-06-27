@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Chart } from 'primereact/components/chart/Chart';
+import { Chart } from '../../../node_modules/primereact/components/chart/Chart';
 
 import './Market.css';
 
@@ -9,8 +9,10 @@ class Market extends Component {
     authData = this.props;
   }
 
-  componentDidMount() {
-    var data = {
+  componentDidMount() {}
+
+  render() {
+    const data = {
       labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
@@ -27,9 +29,6 @@ class Market extends Component {
         }
       ]
     };
-  }
-
-  render() {
     return (
       <main className="container">
         <div className="pure-g">
