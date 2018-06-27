@@ -13,19 +13,21 @@ import Market from './layouts/market/Market';
 import Profile from './user/layouts/profile/Profile';
 
 // Redux Store
-import store from './store';
+import store from './store'
+import MarketContainer from "./layouts/market/market-container";
 
 const history = syncHistoryWithStore(browserHistory, store);
 
-ReactDOM.render(
-  <Provider store={store}>
-    <Router history={history}>
-      <Route path="/" component={App}>
-        <IndexRoute component={Home} />
-        <Route path="profile" component={UserIsAuthenticated(Profile)} />
-        <Route path="market" component={UserIsAuthenticated(Market)} />
-      </Route>
-    </Router>
-  </Provider>,
+ReactDOM.render((
+    <Provider store={store}>
+      <Router history={history}>
+        <Route path="/" component={App}>
+          <IndexRoute component={Home} />
+          <Route path="profile" component={UserIsAuthenticated(Profile)} />
+          <Route path="market" component={UserIsAuthenticated(MarketContainer)} />
+        </Route>
+      </Router>
+    </Provider>
+  ),
   document.getElementById('root')
 );
