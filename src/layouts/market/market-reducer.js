@@ -30,9 +30,9 @@ export const mock_buy = [
 const initialState = {
     items: mock_buy,
     id: 5,
-};
+}
 
-const userReducer = (state = initialState, action) => {
+const marketReducer = (state = initialState, action) => {
     if (action.type === 'SELL')
     {
         const new_buy = action.payload;
@@ -47,7 +47,7 @@ const userReducer = (state = initialState, action) => {
 
     if (action.type === 'BUY')
     {
-        const filtered = state.items.filter(i => i.id !== action.payload.id);
+        const filtered = state.items.filter(i => i.id !== action.payload);
         return {
             ...state,
             items: filtered,
@@ -57,4 +57,4 @@ const userReducer = (state = initialState, action) => {
     return state
 }
 
-export default userReducer
+export default marketReducer
