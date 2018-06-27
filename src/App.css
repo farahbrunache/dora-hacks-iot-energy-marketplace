@@ -24,7 +24,6 @@ pre {
 }
 
 .title {
-  color: white;
   font-size: 40pt;
   font-weight: 1000;
   top: 26vh;
@@ -32,7 +31,6 @@ pre {
 }
 
 .subtitle {
-  color: white;
   font-size: 20pt;
   font-weight: 300;
   top: 26vh;
@@ -104,5 +102,3 @@ pre {
   height: 16px;
   margin-right: 10px;
 }
-
-
