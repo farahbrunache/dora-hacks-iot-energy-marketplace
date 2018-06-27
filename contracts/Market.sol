@@ -8,47 +8,52 @@ contract Market {
     /**
     * Market
     */
-	address public seller;
-	address public buyer;
+    mapping (uint => Item) items;
+    mapping (uint => bool) sold;
 
-	uint public price;
+    uint itemCount;
 
-    uint depositedAmount;
+    struct Item {
+        address seller;
+        uint price;
+        uint energy;
+    }
 
     /**
     * The logs that will be emitted in every step of the contract's life cycle
     */
-	event Transaction(address seller, address buyer, uint amount);
+    event Sell(address seller, uint price, uint energy, uint itemId);
+	event Transaction(address seller, address buyer, uint price, uint energy, uint itemId);
+	event ReceivePayment(address seller, uint amount);
 
     /**
     * The contract constructor
     */
 	constructor() public {
-		seller = msg.sender;
-		price = msg.price;
+	    itemCount = 0;
+	}
+
+	function sellEnergy(uint price, uint energy) public {
+	    var item = Item(msg.sender, price, energy);
+		items[itemCount] = item;
+		sold[itemCount] = false;
+		emit Sell(msg.sender, price, energy, itemCount);
+		itemCount = itemCount + 1;
 	}
 
     /**
     * buyer comes in
     */
-	function registerAsBuyer() public {
-        require(buyer == address(0), msg.value == price);
+	function buyEnergy(uint itemId) public payable {
+	    require(itemId >= 0 && itemId < itemCount && sold[itemId] == false);
+        var item = items[itemId];
 
-        buyer = msg.sender;
-        depositedAmount = msg.value;
-        emit Transaction(seller, buyer, depositedAmount);
-    }
+        require(msg.value == item.price);
+        var buyer = msg.sender;
+        emit Transaction(item.seller, buyer, item.price, item.energy, itemId);
 
-    /**
-    * The withdraw function, following the withdraw pattern shown and explained here:
-    * http://solidity.readthedocs.io/en/develop/common-patterns.html#withdrawal-from-contracts
-    */
-    function withdraw() public {
-        require(seller == msg.sender);
-
-        uint amount = depositedAmount;
-
-        depositedAmount = 0;
-        msg.sender.transfer(amount);
-    }
+        item.seller.transfer(item.price);
+        sold[itemId] = true;
+        emit ReceivePayment(item.seller, item.price);
+	}
 }
