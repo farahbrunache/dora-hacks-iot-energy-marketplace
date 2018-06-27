@@ -4,24 +4,26 @@
   color: black;
 }
 
-.containerr {
+.container {
   color: white;
 }
 
 img {
   padding-top: 5vh;
   width: 45vw;
-  max-width: 200px;
 }
 
 #energy {
   font-size: 30pt;
+  line-height: 10px;
 }
 
 #produced {
   font-size: 18pt;
+  line-height: 10px;
 }
 
 #name {
   color: #ff9400;
+  font-size: 20pt;
 }

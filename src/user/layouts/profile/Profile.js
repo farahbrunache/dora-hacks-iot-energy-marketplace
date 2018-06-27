@@ -31,7 +31,7 @@ class Profile extends Component {
     };
 
     return(
-      <main className='containerr'>
+      <main className='container'>
         <div className='pure-g'>
           <div className='pure-u-1-1'>
             <p id='name'>
@@ -42,7 +42,7 @@ class Profile extends Component {
           <p id='energy'>628 kWh</p>
           <p id='produced'>Produced</p>
           <p>You saved 70.2 dollars</p>
-          <Link to='/dashboard' id='detailButton' className='pure-u-1-1 pure-menu-link'>Details</Link>
+          <Link to='/market' id='detailButton' className='pure-u-1-1 pure-menu-link'>Market</Link>
           </div>
         </div>
       </main>

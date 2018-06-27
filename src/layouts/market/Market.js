@@ -110,31 +110,29 @@ class Market extends Component {
 
   render() {
     return (
-      <main>
-        <div className="containerr">
-          <div className="rows">
-            <div className="row">
-              <div className="col-9" />
-              <div className="col-3">
-                {mock_buy.map(item => {
-                  return (
-                    <div className="card">
-                      <div className="card-body">
-                        <h5 className="card-title">{item.energy} kWh</h5>
-                        <p className="card-text">{item.price} Eth</p>
-                        <a
-                          className="btn btn-primary"
-                          onClick={() => this.buyEnergy(item.id, item.price)}
-                        >
-                          Buy
-                        </a>
-                      </div>
+      <main className="container">
+        <div className="rows">
+          <div className="row">
+            <div className="col-9" />
+            <div className="col-3">
+              {mock_buy.map(item => {
+                return (
+                  <div className="card">
+                    <div className="card-body">
+                      <h5 className="card-title">{item.energy} kWh</h5>
+                      <p className="card-text">{item.price} Eth</p>
+                      <a
+                        className="btn btn-primary"
+                        onClick={() => this.buyEnergy(item.id, item.price)}
+                      >
+                        Buy
+                      </a>
                     </div>
-                  );
-                })}
-                {/*<button type="button" className="btn btn-light" onClick={() => this.sellEnergy(5, 100)}>Sell</button>*/}
-                {/*<button type="button" className="btn btn-light" onClick={() => this.buyEnergy(0, 5)}>Buy</button>*/}
-              </div>
+                  </div>
+                );
+              })}
+              {/*<button type="button" className="btn btn-light" onClick={() => this.sellEnergy(5, 100)}>Sell</button>*/}
+              {/*<button type="button" className="btn btn-light" onClick={() => this.buyEnergy(0, 5)}>Buy</button>*/}
             </div>
           </div>
         </div>
